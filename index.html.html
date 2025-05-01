@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadoo - Travel, enjoy and live a new and full life</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  <style>
+    /* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #5E6282;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #FFF1DA;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: 'Volkhov', serif;
+  color: #14183E;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+header {
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #181E4B;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #DF6951;
+}
+
+.login-btn {
+  margin-right: 10px;
+}
+
+.signup-btn {
+  padding: 8px 18px;
+  border: 1px solid #212832;
+  border-radius: 5px;
+}
+
+.language select {
+  border: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  color: #5E6282;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content .subtitle {
+  color: #DF6951;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  color: #181E4B;
+}
+
+.hero-content .description {
+  font-size: 16px;
+  margin-bottom: 34px;
+  max-width: 480px;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.find-more-btn {
+  background-color: #F1A501;
+  color: white;
+  padding: 18px 26px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  box-shadow: 0 20px 35px rgba(241, 165, 1, 0.15);
+}
+
+.play-demo-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: transparent;
+  color: #686D77;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.play-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: #DF6951;
+  border-radius: 50%;
+  color: white;
+}
+
+.hero-image {
+  position: relative;
+  flex: 1;
+  text-align: right;
+}
+
+/* Services Section */
+.services {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header p {
+  color: #5E6282;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.section-header h2 {
+  color: #14183E;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #FFFFFF;
+  border-radius: 36px;
+  padding: 45px 30px;
+  text-align: center;
+  flex: 1;
+  min-width: 240px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-card:hover {
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.02), 0 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0 20px 13px rgba(0, 0, 0, 0.01), 0 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.weather-icon {
+  background-color: #F0BB1F15;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23F0BB1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3v3a2 2 0 0 1-2 2H3'/%3E%3Cpath d='M21 8V5a2 2 0 0 0-2-2h-5'/%3E%3Cpath d='M3 16v3a2 2 0 0 0 2 2h5'/%3E%3Cpath d='M16 21h3a2 2 0 0 0 2-2v-5'/%3E%3C/svg%3E");
+}
+
+.flights-icon {
+  background-color: #DF695115;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23DF6951' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2L11 13'/%3E%3Cpath d='M22 2l-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
+}
+
+.events-icon {
+  background-color: #006CE415;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23006CE4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+}
+
+.customization-icon {
+  background-color: #FFF1DA;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23DF6951' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'/%3E%3C/svg%3E");
+}
+
+.service-card h3 {
+  color: #1E1D4C;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #5E6282;
+  line-height: 1.6;
+}
+
+/* Top Destinations Section */
+.top-destinations {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.destination-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.destination-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 320px;
+}
+
+.destination-image {
+  width: 100%;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rome {
+  background-image: url('https://source.unsplash.com/random/300x350/?rome,colosseum');
+}
+
+.london {
+  background-image: url('https://source.unsplash.com/random/300x350/?london,bigben');
+}
+
+.europe {
+  background-image: url('https://source.unsplash.com/random/300x350/?europe,eiffel');
+}
+
+.destination-info {
+  padding: 20px;
+}
+
+.destination-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.destination-details h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.destination-details p {
+  font-weight: 500;
+}
+
+.trip-duration {
+  color: #5E6282;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trip-duration::before {
+  content: '🕒';
+  font-size: 16px;
+}
+
+/* Booking Steps Section */
+.booking-steps {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.booking-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.booking-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.booking-text .subtitle {
+  color: #5E6282;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.booking-text h2 {
+  color: #14183E;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.yellow-icon {
+  background-color: #F0BB1F;
+}
+
+.red-icon {
+  background-color: #F15A2B;
+}
+
+.blue-icon {
+  background-color: #006CE4;
+}
+
+.step-content h3 {
+  color: #5E6282;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.step-content p {
+  color: #5E6282;
+}
+
+.booking-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 370px;
+}
+
+.trip-card {
+  background-color: #FFFFFF;
+  border-radius: 26px;
+  padding: 24px;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.trip-image {
+  width: 100%;
+  height: 160px;
+  background-image: url('https://source.unsplash.com/random/300x160/?greece,santorini');
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  margin-bottom: 26px;
+}
+
+.trip-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.trip-card p {
+  color: #5E6282;
+  margin-bottom: 20px;
+}
+
+.trip-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.trip-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip-footer p span {
+  font-weight: 500;
+}
+
+.heart-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.testimonials-header {
+  max-width: 500px;
+}
+
+.testimonial-content {
+  display: flex;
+  gap: 50px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  position: relative;
+  flex: 1;
+}
+
+.testimonial-image {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-image: url('https://source.unsplash.com/random/68x68/?person,professional');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -34px;
+  left: 30px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.testimonial-location,
+.testimonial-role {
+  font-size: 14px;
+  color: #5E6282;
+}
+
+.testimonial-card-secondary {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+}
+
+.dot.active {
+  background-color: #39425D;
+}
+
+.arrows {
+  display: flex;
+  gap: 20px;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #BCB7C2;
+  background-color: transparent;
+  color: #BCB7C2;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Partners Section */
+.partners {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.partner-logo {
+  max-height: 50px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+}
+
+/* Subscribe Section */
+.subscribe {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.subscribe-box {
+  background-color: #DFD7F9;
+  border-radius: 20px;
+  padding: 70px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-box::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #747DEF;
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+  opacity: 0.3;
+}
+
+.subscribe-box h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #5E6282;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.email-input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.email-input input {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #5E6282;
+}
+
+.subscribe-btn {
+  padding: 18px 40px;
+  background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  padding: 80px 0 40px;
+  background-color: #FFFFFF;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  color: #080809;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-column ul li a {
+  color: #5E6282;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #DF6951;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.app-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.app-button {
+  display: inline-block;
+  padding: 8px;
+  background-color: #080809;
+  border-radius: 8px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 80px;
+  color: #5E6282;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 48px;
+  }
+  
+  .service-cards, 
+  .destination-cards {
+    justify-content: center;
+  }
+  
+  .section-header h2 {
+    font-size: 40px;
+  }
+  
+  .booking-text h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .cta-buttons {
+    justify-content: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+  }
+  
+  .booking-content {
+    flex-direction: column;
+  }
+  
+  .testimonial-content {
+    flex-direction: column;
+  }
+  
+  .section-header h2,
+  .booking-text h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .section-header h2,
+  .booking-text h2 {
+    font-size: 28px;
+  }
+  
+  .find-more-btn {
+    padding: 15px 20px;
+  }
+  
+  .service-card {
+    min-width: 100%;
+  }
+  
+  .destination-card {
+    min-width: 100%;
+  }
+
+  </style>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <h1>Jadoo</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Flights</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a class="login-btn" href="#">Login</a></li>
+          <li><a class="signup-btn" href="#">Sign up</a></li>
+          <li class="language">
+            <select>
+              <option>EN</option>
+              <option>FR</option>
+              <option>ES</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="subtitle">BEST DESTINATIONS AROUND THE WORLD</p>
+        <h1>Travel, enjoy <br>and live a new <br>and full life</h1>
+        <p class="description">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+        <div class="cta-buttons">
+          <button class="find-more-btn">Find out more</button>
+          <button class="play-demo-btn">
+            <span class="play-icon">▶</span>
+            <span>Play Demo</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b67e1312c40c776bf91f4cd0a625d7e82eb7d573/Traveller%201.svg" alt="Traveler with backpack">
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <p>CATEGORY</p>
+        <h2>We Offer Best Services</h2>
+      </div>
+      <div class="service-cards">
+        <div class="service-card">
+          <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/1fd987961b9a328a1fee0bc060430c61266f996d/Group%2048.svg" alt="Weather Icon" class="service-icon">
+          <h3>Calculated Weather</h3>
+          <p>Built Wicket longer admire do barton vanity itself do in it.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/1fd987961b9a328a1fee0bc060430c61266f996d/Group%2051.svg" alt="Flight Icon" class="service-icon">
+          <h3>Best Flights</h3>
+          <p>Engrossed listening. Park gate sell they west hard for the.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/1fd987961b9a328a1fee0bc060430c61266f996d/Group%2050.svg" alt="Events Icon" class="service-icon">
+          <h3>Local Events</h3>
+          <p>Barton vanity itself do in it. Prefered to sportsmen.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/1fd987961b9a328a1fee0bc060430c61266f996d/Group%2049.svg" alt="Gear Icon" class="service-icon">
+          <h3>Customization</h3>
+          <p>We deliver outsourced aviation services for military customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="top-destinations">
+    <div class="container">
+      <div class="section-header">
+        <p>Top Selling</p>
+        <h2>Top Destinations</h2>
+      </div>
+      <div class="destination-cards">
+        <div class="destination-card">
+          <img src="https://github.com/ahmedekrami/jadoo/blob/main/Rectangle%2014%20(1).png?raw=true" alt="Rome" class="destination-image" />
+          <div class="destination-info">
+            <div class="destination-details">
+              <h3>Rome, Italy</h3>
+              <p>$5.42k</p>
+            </div>
+            <p class="trip-duration">10 Days Trip</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://github.com/ahmedekrami/jadoo/blob/main/Rectangle%2014.png?raw=true" alt="Trip Icon" class="destination-image london" />
+          <div class="destination-info">
+            <div class="destination-details">
+              <h3>London, UK</h3>
+              <p>$4.2k</p>
+            </div>
+            <p class="trip-duration">12 Days Trip</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b470a2e798291c9e7fb0fb1ce79c0c6f3a1c0d8c/Rectangle%2014%20(1).svg" alt="Europe" class="destination-img" />
+          <div class="destination-info">
+            <div class="destination-details">
+              <h3>Full Europe</h3>
+              <p>$15k</p>
+            </div>
+            <p class="trip-duration">28 Days Trip</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-steps">
+    <div class="container">
+      <div class="booking-content">
+        <div class="booking-text">
+          <p class="subtitle">Easy and Fast</p>
+          <h2>Book Your Next Trip In 3 Easy Steps</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-icon yellow-icon">1</div>
+              <div class="step-content">
+                <h3>Choose Destination</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-icon red-icon">2</div>
+              <div class="step-content">
+                <h3>Make Payment</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-icon blue-icon">3</div>
+              <div class="step-content">
+                <h3>Reach Airport on Selected Date</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="booking-card">
+          <div class="trip-card">
+            <img class="trip-image" src="https://raw.githubusercontent.com/ahmedekrami/jadoo/cb7203415f65939aec65fb084661dd8e68577def/Rectangle%2017.svg" alt="Trip to Greece" style="object-fit: contain;">
+            <h3>Trip To Greece</h3>
+            <p>14-29 June | by Robbin joseph</p>
+            <div class="trip-icons">
+              <span class="icon"><i class="fa-brands fa-envira"></i></span>
+             <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+              <span class="icon"><i class="fa-brands fa-telegram"></i></span>
+            </div>
+            <div class="trip-footer">
+              <p><span>24</span> people going</p>
+              <div class="heart-icon">❤️</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <p>TESTIMONIALS</p>
+        <h2>What People Say About Us.</h2>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-card">
+          <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b0e12eb8055e6b3c603eb2f9583a064f6deee7ff/Image.svg" alt="User">
+          <p class="testimonial-text">"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no rejoiced."</p>
+          <p class="testimonial-name">Mike taylor</p>
+          <p class="testimonial-location">Lahore, Pakistan</p>
+        </div>
+        <div class="testimonial-card-secondary">
+          <p class="testimonial-name">CHRIS THOMAS</p>
+          <p class="testimonial-role">CEO of Red Button</p>
+        </div>
+      </div>
+      <div class="testimonial-nav">
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="arrows">
+          <button class="arrow left">←</button>
+          <button class="arrow right">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="container">
+      <div class="partner-logos">
+        <img class="partner-logo" src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b0e12eb8055e6b3c603eb2f9583a064f6deee7ff/image%2027.svg" alt="Axon">
+        <img class="partner-logo" src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b0e12eb8055e6b3c603eb2f9583a064f6deee7ff/image%2028.svg" alt="Jetstar">
+        <img class="partner-logo" src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b0e12eb8055e6b3c603eb2f9583a064f6deee7ff/image%2029.svg" alt="Expedia">
+        <img class="partner-logo" src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b0e12eb8055e6b3c603eb2f9583a064f6deee7ff/image%2030.svg" alt="Qantas">
+        <img class="partner-logo" src="https://raw.githubusercontent.com/ahmedekrami/jadoo/b0e12eb8055e6b3c603eb2f9583a064f6deee7ff/image%2031.svg" alt="Alitalia">
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div class="container">
+      <div class="subscribe-box">
+        <h2>Subscribe to get information, latest news and other interesting offers about Jadoo</h2>
+        <div class="subscribe-form">
+          <div class="email-input">
+            <input type="email" placeholder="Your email">
+          </div>
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">Jadoo.</h3>
+          <p>Book your trip in minutes, get full control for much longer.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Mobile</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Help/FAQ</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Affiliates</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">Airlinefees</a></li>
+            <li><a href="#">Airline</a></li>
+            <li><a href="#">Low fare tips</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <p>Discover our app</p>
+          <div class="app-buttons">
+            <a href="#" class="app-button">
+              <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/27283791b61303853347c1eca67445658a790363/Google%20Play.svg" alt="Google Play">
+            </a>
+            <a href="#" class="app-button">
+              <img src="https://raw.githubusercontent.com/ahmedekrami/jadoo/27283791b61303853347c1eca67445658a790363/Play%20Store.svg" alt="App Store">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>All rights reserved@jadoo.co</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
